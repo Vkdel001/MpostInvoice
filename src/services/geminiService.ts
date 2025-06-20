@@ -32,10 +32,9 @@ class GeminiService {
         - Mauritian Rupees: "MUR 1000.00" (with Rs prefix and 2 decimals)
         - Other currencies: Use appropriate symbol with 2 decimals
         
-        Extract these fields for each line item:
+      Extract these fields for each line item:
         - date: Invoice date (format: YYYY-MM-DD)
-        - Ministry: Name of the supplier/vendor
-        - MIN No : Name of Ministry
+        - supplierName: Name of the supplier/vendor
         - description: Description of services/products
         - amount: Base amount (without VAT/tax) - apply currency rules above
         - quantity: Quantity of items/services (number)
