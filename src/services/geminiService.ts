@@ -25,18 +25,17 @@ class GeminiService {
         CRITICAL CURRENCY DETECTION RULES - FOLLOW EXACTLY:
         1. FIRST, carefully scan the entire invoice for ANY currency symbols or indicators
         2. Look for: $, USD, Dollar, Rs, ₹, INR, Rupee, Rupees, €, EUR, Euro, £, GBP, Pound
-        3. DEFAULT CURRENCY: If NO currency symbol is found anywhere in the invoice, use Indian Rupees (Rs)
+        3. DEFAULT CURRENCY: If NO currency symbol is found anywhere in the invoice, use Mauritian Rupees MUR
         4. ONLY use $ (USD) if you explicitly see a dollar sign ($) or "USD" or "Dollar" written in the invoice
-        5. Use Rs for Indian Rupees if you see: Rs, ₹, INR, "Rupee", "Rupees", or if no currency is visible
         
         CURRENCY FORMATTING RULES:
-        - Indian Rupees: "Rs 1000.00" (with Rs prefix and 2 decimals)
-        - US Dollars: "$1000.00" (with $ prefix and 2 decimals) - ONLY if $ is visible in invoice
+        - Mauritian Rupees: "MUR 1000.00" (with Rs prefix and 2 decimals)
         - Other currencies: Use appropriate symbol with 2 decimals
         
         Extract these fields for each line item:
         - date: Invoice date (format: YYYY-MM-DD)
-        - supplierName: Name of the supplier/vendor
+        - Ministry: Name of the supplier/vendor
+        - MIN No : Name of Ministry
         - description: Description of services/products
         - amount: Base amount (without VAT/tax) - apply currency rules above
         - quantity: Quantity of items/services (number)
